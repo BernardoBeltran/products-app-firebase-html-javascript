@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/darkly/bootstrap.min.css">
+</head>
+
+<body>
+    
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <form id="products-form">
+                            <div class="form-group">
+                                <input type="text" id="product-title" class="form-control" placeholder="Product Name" autofocus required>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" id="product-price" step="0.01" class="form-control"
+                                    placeholder="Product Price" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="product-description" rows="3" class="form-control"
+                                    placeholder="Product Description" required></textarea>
+                            </div>
+                            <button class="btn btn-primary" id="btn-product-form">
+                                Save Product
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6" id="products-container"></div>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    
+     <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-firestore.js"></script>
+    
+    <script>
+        // Your web app's Firebase configuration here
+        
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
